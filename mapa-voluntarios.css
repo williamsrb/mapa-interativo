@@ -158,6 +158,64 @@ header p {
   box-shadow: 0 0 0 1px var(--border-accent-25);
 }
 
+.filter-municipios-nav {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: min(28vh, 240px);
+  padding: 0.5rem 0.55rem;
+  border-radius: 8px;
+  background: var(--panel-inner-bg);
+  border: 1px solid var(--border-accent-20);
+}
+
+.filter-municipios-nav[hidden] {
+  display: none !important;
+}
+
+.filter-municipios-heading {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 0.4rem;
+}
+
+.filter-municipio-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.filter-municipio-link {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.filter-municipio-link:hover {
+  background: var(--border-accent-25);
+}
+
+.filter-municipio-link:focus-visible {
+  background: var(--border-accent-25);
+  outline: 2px solid var(--tooltip-border);
+  outline-offset: 1px;
+}
+
 .municipio-panel {
   flex: 1;
   min-height: 0;

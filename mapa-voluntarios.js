@@ -265,10 +265,19 @@ const main = async () => {
     );
   };
 
+  const filterMunicipiosNav = document.getElementById("filter-municipios-nav");
+  const filterMunicipioList = document.getElementById("filter-municipio-list");
+
+  const hideFilterMunicipioNav = () => {
+    if (filterMunicipioList) filterMunicipioList.replaceChildren();
+    if (filterMunicipiosNav) filterMunicipiosNav.hidden = true;
+  };
+
   const fullResetFromFilter = () => {
     filterActive = false;
     filterMatchByKey = new Map();
     currentFilterQueryLower = "";
+    hideFilterMunicipioNav();
     clearFilterHighlights();
     if (activeGroup) {
       restoreFill(activeGroup);
@@ -336,6 +345,61 @@ const main = async () => {
     tooltip.setAttribute("aria-hidden", "false");
   };
 
+  /** @param {string} nome */
+  const selectMunicipioByNome = (nome) => {
+    if (!nome) return;
+    const g = nameToGroup.get(normalizeKey(nome));
+    if (!(g instanceof SVGGElement)) return;
+    clearMunicipioActiveClass(imported);
+    g.classList.add("municipio-active");
+    renderVolunteerPanel(
+      nome,
+      volunteersByCity,
+      filterActive ? currentFilterQueryLower : null
+    );
+  };
+
+  const renderFilterMunicipioNav = () => {
+    if (!filterMunicipioList || !filterMunicipiosNav) return;
+    filterMunicipioList.replaceChildren();
+
+    if (!filterActive || filterMatchByKey.size === 0) {
+      filterMunicipiosNav.hidden = true;
+      return;
+    }
+
+    const entries = [...filterMatchByKey.keys()]
+      .map((key) => {
+        const g = nameToGroup.get(key);
+        const nome = g?.getAttribute("nome");
+        if (!nome) return null;
+        return {
+          key,
+          nome,
+          count: filterMatchByKey.get(key) ?? 0,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+
+    for (const { key, nome, count } of entries) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.className = "filter-municipio-link";
+      a.href = "#";
+      a.dataset.municipioKey = key;
+      a.textContent = nome;
+      a.setAttribute(
+        "aria-label",
+        `${nome}, ${count} correspondência${count === 1 ? "" : "s"} — ver na lista`
+      );
+      li.appendChild(a);
+      filterMunicipioList.appendChild(li);
+    }
+
+    filterMunicipiosNav.hidden = false;
+  };
+
   /** @param {string} rawQuery */
   const runFilterQuery = (rawQuery) => {
     const q = rawQuery.trim();
@@ -354,6 +418,7 @@ const main = async () => {
     tooltip.setAttribute("aria-hidden", "true");
     clearMunicipioActiveClass(imported);
     resetPanelToPlaceholder();
+    hideFilterMunicipioNav();
 
     clearFilterHighlights();
     filterMatchByKey = new Map();
@@ -381,6 +446,7 @@ const main = async () => {
     setStatus(
       `Filtro ativo: ${filterMatchByKey.size} município(s) · ${totalMatches} correspondência(s)`
     );
+    renderFilterMunicipioNav();
   };
 
   imported.addEventListener("click", (e) => {
@@ -390,15 +456,25 @@ const main = async () => {
     if (!(g instanceof SVGGElement)) return;
     const nome = g.getAttribute("nome");
     if (!nome) return;
-
-    clearMunicipioActiveClass(imported);
-    g.classList.add("municipio-active");
-    renderVolunteerPanel(
-      nome,
-      volunteersByCity,
-      filterActive ? currentFilterQueryLower : null
-    );
+    selectMunicipioByNome(nome);
   });
+
+  if (filterMunicipiosNav) {
+    filterMunicipiosNav.addEventListener("click", (e) => {
+      const t = e.target;
+      if (!(t instanceof Element)) return;
+      const a = t.closest("a.filter-municipio-link");
+      if (!(a instanceof HTMLAnchorElement)) return;
+      e.preventDefault();
+      const key = a.dataset.municipioKey;
+      if (!key) return;
+      const g = nameToGroup.get(key);
+      if (!(g instanceof SVGGElement)) return;
+      const nome = g.getAttribute("nome");
+      if (!nome) return;
+      selectMunicipioByNome(nome);
+    });
+  }
 
   imported.addEventListener("pointermove", (e) => {
     const target = e.target;
