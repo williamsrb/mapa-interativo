@@ -278,6 +278,19 @@ const main = async () => {
     if (filterMunicipiosNav) filterMunicipiosNav.hidden = true;
   };
 
+  const updateClearButtonsVisibility = () => {
+    const fc = document.getElementById("filter-clear-btn");
+    const pc = document.getElementById("municipio-panel-clear-btn");
+    const fi = document.getElementById("volunteer-filter");
+    if (fc instanceof HTMLElement) {
+      fc.hidden =
+        !(fi instanceof HTMLInputElement) || fi.value.trim().length === 0;
+    }
+    if (pc instanceof HTMLElement) {
+      pc.hidden = !imported.querySelector("g[nome].municipio-active");
+    }
+  };
+
   /** @param {{ syncUrl?: boolean }} [opts] */
   const fullResetFromFilter = (opts = {}) => {
     const { syncUrl = true } = opts;
@@ -301,6 +314,26 @@ const main = async () => {
       u.hash = "";
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
+    updateClearButtonsVisibility();
+  };
+
+  /** @param {{ syncUrl?: boolean }} [opts] */
+  const clearMunicipioSelectionOnly = (opts = {}) => {
+    const { syncUrl = true } = opts;
+    clearMunicipioActiveClass(imported);
+    resetPanelToPlaceholder();
+    if (activeGroup) {
+      restoreFill(activeGroup);
+      activeGroup = null;
+    }
+    tooltip.classList.remove("visible");
+    tooltip.setAttribute("aria-hidden", "true");
+    if (syncUrl) {
+      const u = new URL(window.location.href);
+      u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    }
+    updateClearButtonsVisibility();
   };
 
   /** @param {SVGGElement} g */
@@ -375,6 +408,7 @@ const main = async () => {
       u.searchParams.set(MUNICIPIO_QUERY_PARAM, nome);
       history.pushState(null, "", u.pathname + u.search + u.hash);
     }
+    updateClearButtonsVisibility();
   };
 
   const renderFilterMunicipioNav = () => {
@@ -473,6 +507,7 @@ const main = async () => {
       u.hash = `#${encodeURIComponent(q)}`;
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
+    updateClearButtonsVisibility();
   };
 
   imported.addEventListener("click", (e) => {
@@ -546,16 +581,37 @@ const main = async () => {
       const nome = g instanceof SVGGElement ? g.getAttribute("nome") : null;
       if (nome) selectMunicipioByNome(nome, { syncUrl: false });
     }
+    updateClearButtonsVisibility();
   };
 
   let debounceTimer = 0;
   filterInput.addEventListener("input", () => {
+    updateClearButtonsVisibility();
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(() => {
       debounceTimer = 0;
       runFilterQuery(filterInput.value, { syncUrl: true });
     }, FILTER_DEBOUNCE_MS);
   });
+
+  const filterClearBtn = document.getElementById("filter-clear-btn");
+  if (filterClearBtn instanceof HTMLButtonElement) {
+    filterClearBtn.addEventListener("click", () => {
+      window.clearTimeout(debounceTimer);
+      debounceTimer = 0;
+      filterInput.value = "";
+      fullResetFromFilter({ syncUrl: true });
+    });
+  }
+
+  const municipioPanelClearBtn = document.getElementById(
+    "municipio-panel-clear-btn"
+  );
+  if (municipioPanelClearBtn instanceof HTMLButtonElement) {
+    municipioPanelClearBtn.addEventListener("click", () => {
+      clearMunicipioSelectionOnly({ syncUrl: true });
+    });
+  }
 
   /**
    * Hash ou query mudaram (link, voltar/avançar): atualiza campo e UI sem
@@ -590,6 +646,8 @@ const main = async () => {
       if (nome1) selectMunicipioByNome(nome1, { syncUrl: false });
     }
   }
+
+  updateClearButtonsVisibility();
 };
 
 main();

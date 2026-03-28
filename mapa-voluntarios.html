@@ -45,6 +45,28 @@
               spellcheck="false"
               enterkeyhint="search"
             />
+            <!-- Font Awesome Free 6.5.1 — xmark (solid) -->
+            <button
+              type="button"
+              id="filter-clear-btn"
+              class="icon-clear-btn filter-clear-btn"
+              aria-label="Limpar filtro"
+              title="Limpar filtro"
+              hidden
+            >
+              <svg
+                class="icon-clear-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.8 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.2 256 342.6 150.6z"
+                />
+              </svg>
+            </button>
           </span>
         </label>
         <nav
@@ -61,7 +83,33 @@
           aria-labelledby="municipio-panel-title"
           aria-live="polite"
         >
-          <h2 id="municipio-panel-title" class="municipio-panel-title">Selecione um município</h2>
+          <div class="municipio-panel-head">
+            <h2 id="municipio-panel-title" class="municipio-panel-title">
+              Selecione um município
+            </h2>
+            <!-- Font Awesome Free 6.5.1 — xmark (solid) -->
+            <button
+              type="button"
+              id="municipio-panel-clear-btn"
+              class="icon-clear-btn municipio-panel-clear-btn"
+              aria-label="Limpar município selecionado"
+              title="Limpar município"
+              hidden
+            >
+              <svg
+                class="icon-clear-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.8 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.2 256 342.6 150.6z"
+                />
+              </svg>
+            </button>
+          </div>
           <div id="municipio-panel-content" class="municipio-panel-content">
             <p class="municipio-panel-placeholder">
               Clique em um polígono no mapa para listar os voluntários deste arquivo.
