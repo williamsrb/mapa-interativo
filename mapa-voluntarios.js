@@ -4,6 +4,8 @@ const DATA_URL = "./voluntarios_es_teste.json";
 const FILTER_DEBOUNCE_MS = 300;
 /** Filtro só roda com pelo menos 3 caracteres (após trim). */
 const FILTER_MIN_LENGTH = 3;
+/** Query param do município selecionado (valor com nome oficial, encoded). */
+const MUNICIPIO_QUERY_PARAM = "m";
 
 const statusEl = document.getElementById("status");
 const svgHost = document.getElementById("svg-root");
@@ -57,9 +59,21 @@ const readFilterFromHash = () => {
   const raw = window.location.hash.replace(/^#/, "");
   if (!raw) return "";
   try {
-    return decodeURIComponent(raw);
+    return decodeURIComponent(raw.replace(/\+/g, " "));
   } catch {
     return raw;
+  }
+};
+
+/** @returns {string} */
+const readMunicipioFromSearch = () => {
+  try {
+    const u = new URL(window.location.href);
+    const m = u.searchParams.get(MUNICIPIO_QUERY_PARAM);
+    if (!m) return "";
+    return decodeURIComponent(m.replace(/\+/g, " "));
+  } catch {
+    return "";
   }
 };
 
@@ -256,15 +270,6 @@ const main = async () => {
     });
   };
 
-  const clearHashIfPresent = () => {
-    if (!window.location.hash) return;
-    history.replaceState(
-      null,
-      "",
-      `${window.location.pathname}${window.location.search}`
-    );
-  };
-
   const filterMunicipiosNav = document.getElementById("filter-municipios-nav");
   const filterMunicipioList = document.getElementById("filter-municipio-list");
 
@@ -273,7 +278,9 @@ const main = async () => {
     if (filterMunicipiosNav) filterMunicipiosNav.hidden = true;
   };
 
-  const fullResetFromFilter = () => {
+  /** @param {{ syncUrl?: boolean }} [opts] */
+  const fullResetFromFilter = (opts = {}) => {
+    const { syncUrl = true } = opts;
     filterActive = false;
     filterMatchByKey = new Map();
     currentFilterQueryLower = "";
@@ -288,7 +295,12 @@ const main = async () => {
     tooltip.setAttribute("aria-hidden", "true");
     resetPanelToPlaceholder();
     setStatus(initialStatusText);
-    clearHashIfPresent();
+    if (syncUrl) {
+      const u = new URL(window.location.href);
+      u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      u.hash = "";
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    }
   };
 
   /** @param {SVGGElement} g */
@@ -345,8 +357,9 @@ const main = async () => {
     tooltip.setAttribute("aria-hidden", "false");
   };
 
-  /** @param {string} nome */
-  const selectMunicipioByNome = (nome) => {
+  /** @param {string} nome @param {{ syncUrl?: boolean }} [opts] */
+  const selectMunicipioByNome = (nome, opts = {}) => {
+    const { syncUrl = true } = opts;
     if (!nome) return;
     const g = nameToGroup.get(normalizeKey(nome));
     if (!(g instanceof SVGGElement)) return;
@@ -357,6 +370,11 @@ const main = async () => {
       volunteersByCity,
       filterActive ? currentFilterQueryLower : null
     );
+    if (syncUrl) {
+      const u = new URL(window.location.href);
+      u.searchParams.set(MUNICIPIO_QUERY_PARAM, nome);
+      history.pushState(null, "", u.pathname + u.search + u.hash);
+    }
   };
 
   const renderFilterMunicipioNav = () => {
@@ -400,13 +418,14 @@ const main = async () => {
     filterMunicipiosNav.hidden = false;
   };
 
-  /** @param {string} rawQuery */
-  const runFilterQuery = (rawQuery) => {
+  /** @param {string} rawQuery @param {{ syncUrl?: boolean }} [opts] */
+  const runFilterQuery = (rawQuery, opts = {}) => {
+    const { syncUrl = true } = opts;
     const q = rawQuery.trim();
     const qLower = q.toLowerCase();
 
     if (qLower.length < FILTER_MIN_LENGTH) {
-      fullResetFromFilter();
+      fullResetFromFilter({ syncUrl });
       return;
     }
 
@@ -447,6 +466,13 @@ const main = async () => {
       `Filtro ativo: ${filterMatchByKey.size} município(s) · ${totalMatches} correspondência(s)`
     );
     renderFilterMunicipioNav();
+
+    if (syncUrl) {
+      const u = new URL(window.location.href);
+      u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      u.hash = `#${encodeURIComponent(q)}`;
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    }
   };
 
   imported.addEventListener("click", (e) => {
@@ -507,17 +533,62 @@ const main = async () => {
   const fromHash = readFilterFromHash();
   if (fromHash) filterInput.value = fromHash;
 
+  const applyUrlToUi = () => {
+    filterInput.value = readFilterFromHash();
+    const m = readMunicipioFromSearch();
+    if (filterInput.value.trim().toLowerCase().length >= FILTER_MIN_LENGTH) {
+      runFilterQuery(filterInput.value, { syncUrl: false });
+    } else {
+      fullResetFromFilter({ syncUrl: false });
+    }
+    if (m) {
+      const g = nameToGroup.get(normalizeKey(m));
+      const nome = g instanceof SVGGElement ? g.getAttribute("nome") : null;
+      if (nome) selectMunicipioByNome(nome, { syncUrl: false });
+    }
+  };
+
   let debounceTimer = 0;
   filterInput.addEventListener("input", () => {
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(() => {
       debounceTimer = 0;
-      runFilterQuery(filterInput.value);
+      runFilterQuery(filterInput.value, { syncUrl: true });
     }, FILTER_DEBOUNCE_MS);
   });
 
+  /**
+   * Hash ou query mudaram (link, voltar/avançar): atualiza campo e UI sem
+   * gravar de novo no histórico.
+   */
+  window.addEventListener("hashchange", () => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = 0;
+    applyUrlToUi();
+  });
+
+  window.addEventListener("popstate", () => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = 0;
+    applyUrlToUi();
+  });
+
   if (filterInput.value.trim().toLowerCase().length >= FILTER_MIN_LENGTH) {
-    runFilterQuery(filterInput.value);
+    runFilterQuery(filterInput.value, { syncUrl: false });
+    const m0 = readMunicipioFromSearch();
+    if (m0) {
+      const g0 = nameToGroup.get(normalizeKey(m0));
+      const nome0 = g0 instanceof SVGGElement ? g0.getAttribute("nome") : null;
+      if (nome0) selectMunicipioByNome(nome0, { syncUrl: false });
+    }
+  } else {
+    const m1 = readMunicipioFromSearch();
+    if (m1) {
+      fullResetFromFilter({ syncUrl: false });
+      const g1 = nameToGroup.get(normalizeKey(m1));
+      const nome1 = g1 instanceof SVGGElement ? g1.getAttribute("nome") : null;
+      if (nome1) selectMunicipioByNome(nome1, { syncUrl: false });
+    }
   }
 };
 
