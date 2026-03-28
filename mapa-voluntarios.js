@@ -94,18 +94,26 @@ const buildVolunteersByCity = (data) => {
 /**
  * @param {string} nomeMunicipio
  * @param {Map<string, Array<{ nome?: string; telefone?: string; habilidades_tecnicas?: string[] }>>} byCity
+ * @param {string | null} filterQLower quando definido (filtro ativo), só lista voluntários que casam com a busca
  */
-const renderVolunteerPanel = (nomeMunicipio, byCity) => {
+const renderVolunteerPanel = (nomeMunicipio, byCity, filterQLower = null) => {
   panelTitleEl.textContent = nomeMunicipio;
   const key = normalizeKey(nomeMunicipio);
-  const list = byCity.get(key) ?? [];
+  let list = byCity.get(key) ?? [];
+  const q =
+    typeof filterQLower === "string" ? filterQLower.trim().toLowerCase() : "";
+  const filtering = q.length >= FILTER_MIN_LENGTH;
+  if (filtering) {
+    list = list.filter((row) => volunteerMatchesQuery(row, q));
+  }
   panelContentEl.replaceChildren();
 
   if (list.length === 0) {
     const p = document.createElement("p");
     p.className = "municipio-panel-empty";
-    p.textContent =
-      "Nenhum voluntário neste arquivo para este município.";
+    p.textContent = filtering
+      ? "Nenhum voluntário deste município corresponde ao filtro."
+      : "Nenhum voluntário neste arquivo para este município.";
     panelContentEl.appendChild(p);
     return;
   }
@@ -229,6 +237,8 @@ const main = async () => {
   let filterActive = false;
   /** @type {Map<string, number>} */
   let filterMatchByKey = new Map();
+  /** Texto do filtro em minúsculas (≥ FILTER_MIN_LENGTH) enquanto o filtro estiver ativo. */
+  let currentFilterQueryLower = "";
 
   const resetPanelToPlaceholder = () => {
     panelTitleEl.textContent = "Selecione um município";
@@ -258,6 +268,7 @@ const main = async () => {
   const fullResetFromFilter = () => {
     filterActive = false;
     filterMatchByKey = new Map();
+    currentFilterQueryLower = "";
     clearFilterHighlights();
     if (activeGroup) {
       restoreFill(activeGroup);
@@ -275,23 +286,16 @@ const main = async () => {
   const applyHoverFill = (g) => {
     const poly = g.querySelector("polygon");
     if (!poly) return;
-    if (!g.dataset.savedFill) {
-      const inherited =
-        g.getAttribute("fill") || getComputedStyle(poly).fill || "#308bc9";
-      g.dataset.savedFill = inherited;
-    }
-    poly.style.fill = "#f4d03f";
-    poly.style.strokeWidth = "0.006";
+    poly.style.setProperty("fill", "#f4d03f", "important");
+    poly.style.setProperty("stroke-width", "0.006", "important");
   };
 
   /** @param {SVGGElement} g */
   const restoreFill = (g) => {
     const poly = g.querySelector("polygon");
     if (!poly) return;
-    const saved = g.dataset.savedFill;
-    if (saved) poly.style.fill = saved;
-    else poly.style.removeProperty("fill");
-    poly.style.strokeWidth = "";
+    poly.style.removeProperty("fill");
+    poly.style.removeProperty("stroke-width");
   };
 
   /** @param {MouseEvent} e */
@@ -354,6 +358,7 @@ const main = async () => {
     clearFilterHighlights();
     filterMatchByKey = new Map();
     filterActive = true;
+    currentFilterQueryLower = qLower;
 
     const volunteers = Array.isArray(jsonData) ? jsonData : [];
     for (const row of volunteers) {
@@ -388,7 +393,11 @@ const main = async () => {
 
     clearMunicipioActiveClass(imported);
     g.classList.add("municipio-active");
-    renderVolunteerPanel(nome, volunteersByCity);
+    renderVolunteerPanel(
+      nome,
+      volunteersByCity,
+      filterActive ? currentFilterQueryLower : null
+    );
   });
 
   imported.addEventListener("pointermove", (e) => {

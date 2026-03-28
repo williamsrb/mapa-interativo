@@ -14,6 +14,7 @@
   --panel-inner-bg: rgba(15, 20, 25, 0.55);
   --border-divider: rgba(139, 156, 179, 0.2);
   --map-selection-stroke: #f4d03f;
+  --map-selection-hover: #c9f457;
 }
 
 * {
@@ -243,6 +244,10 @@ header p {
 
 #svg-root g[nome] polygon {
   transition: fill 0.15s ease, stroke-width 0.15s ease, stroke 0.15s ease;
+}
+
+#svg-root g[nome].filter-match polygon {
+  fill: var(--map-selection-hover) !important;
 }
 
 #svg-root g[nome].municipio-active polygon,
