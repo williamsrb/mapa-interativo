@@ -6,6 +6,14 @@
   --accent: #41b6c4;
   --tooltip-bg: rgba(26, 35, 50, 0.96);
   --tooltip-border: #308bc9;
+  --error: #f0a0a0;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --shadow-strong: rgba(0, 0, 0, 0.4);
+  --border-accent-25: rgba(48, 139, 201, 0.25);
+  --border-accent-20: rgba(48, 139, 201, 0.2);
+  --panel-inner-bg: rgba(15, 20, 25, 0.55);
+  --border-divider: rgba(139, 156, 179, 0.2);
+  --map-selection-stroke: #f4d03f;
 }
 
 * {
@@ -52,7 +60,7 @@ header p {
 }
 
 #status.error {
-  color: #f0a0a0;
+  color: var(--error);
 }
 
 .map-wrap {
@@ -60,8 +68,8 @@ header p {
   background: var(--panel);
   border-radius: 12px;
   padding: 0.75rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(48, 139, 201, 0.25);
+  box-shadow: 0 12px 40px var(--shadow);
+  border: 1px solid var(--border-accent-25);
 }
 
 .map-layout {
@@ -81,18 +89,87 @@ header p {
   cursor: default;
 }
 
-.municipio-panel {
+.map-sidebar {
   flex: 0 0 min(100%, 320px);
   width: 100%;
   max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.filter-field-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.filter-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  background: var(--panel-inner-bg);
+  border: 1px solid var(--border-accent-20);
+}
+
+.filter-icon {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted);
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+}
+
+.filter-input::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.filter-input:focus {
+  outline: none;
+}
+
+.filter-input-wrap:focus-within {
+  border-color: var(--tooltip-border);
+  box-shadow: 0 0 0 1px var(--border-accent-25);
+}
+
+.municipio-panel {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
   min-height: 12rem;
   max-height: min(72vh, 640px);
   padding: 0.65rem 0.85rem;
   border-radius: 8px;
-  background: rgba(15, 20, 25, 0.55);
-  border: 1px solid rgba(48, 139, 201, 0.2);
+  background: var(--panel-inner-bg);
+  border: 1px solid var(--border-accent-20);
 }
 
 .municipio-panel-title {
@@ -124,7 +201,7 @@ header p {
 
 .voluntario-card {
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(139, 156, 179, 0.2);
+  border-bottom: 1px solid var(--border-divider);
 }
 
 .voluntario-card:last-child {
@@ -168,8 +245,9 @@ header p {
   transition: fill 0.15s ease, stroke-width 0.15s ease, stroke 0.15s ease;
 }
 
-#svg-root g[nome].municipio-active polygon {
-  stroke: #f4d03f !important;
+#svg-root g[nome].municipio-active polygon,
+#svg-root g[nome].filter-match polygon {
+  stroke: var(--map-selection-stroke) !important;
   stroke-width: 0.006 !important;
 }
 
@@ -195,7 +273,7 @@ header p {
   padding: 0.65rem 0.85rem;
   font-size: 0.88rem;
   line-height: 1.4;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px var(--shadow-strong);
   backdrop-filter: blur(8px);
 }
 
@@ -222,9 +300,13 @@ footer {
     flex-direction: column;
   }
 
-  .municipio-panel {
+  .map-sidebar {
     flex: none;
     max-width: none;
+  }
+
+  .municipio-panel {
+    flex: none;
     max-height: min(50vh, 420px);
   }
 }
