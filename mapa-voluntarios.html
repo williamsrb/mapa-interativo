@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa interativo — Voluntários por município (ES)</title>
+  <link rel="stylesheet" href="mapa-voluntarios.css" />
+</head>
+<body>
+  <header>
+    <h1>Voluntários por município — Espírito Santo</h1>
+    <p>
+      Passe o cursor sobre o mapa para ver a quantidade; clique em um município para ver a lista de
+      voluntários ao lado.
+    </p>
+  </header>
+  <div id="status" aria-live="polite"></div>
+  <div class="map-wrap">
+    <div class="map-layout">
+      <div id="svg-root" role="img" aria-label="Mapa do Espírito Santo"></div>
+      <aside
+        class="municipio-panel"
+        aria-labelledby="municipio-panel-title"
+        aria-live="polite"
+      >
+        <h2 id="municipio-panel-title" class="municipio-panel-title">Selecione um município</h2>
+        <div id="municipio-panel-content" class="municipio-panel-content">
+          <p class="municipio-panel-placeholder">
+            Clique em um polígono no mapa para listar os voluntários deste arquivo.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <div id="tooltip" role="tooltip" aria-hidden="true">
+    <div class="inner">
+      <div class="municipio"></div>
+      <div class="count"></div>
+    </div>
+  </div>
+  <footer>
+    Abra esta página via um servidor HTTP local (por exemplo <code>npx serve</code> ou
+    <code>python -m http.server</code>) para carregar o SVG e o JSON sem bloqueio do navegador.
+  </footer>
+
+  <script type="module" src="mapa-voluntarios.js"></script>
+</body>
+</html>

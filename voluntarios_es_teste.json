@@ -1,0 +1,3289 @@
+[
+  {
+    "id": 1,
+    "nome": "Mariana Cristiane Costa Nascimento",
+    "telefone": "(27) 90520-1488",
+    "cidade": "Afonso Cláudio",
+    "habilidades_tecnicas": [
+      "Organização de eventos",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Aline Lívia Nascimento Batista",
+    "telefone": "(27) 94557-1106",
+    "cidade": "Água Doce do Norte",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Canva",
+      "Word"
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Gabriel Farias Costa",
+    "telefone": "(27) 95635-5333",
+    "cidade": "Águia Branca",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Captação de recursos",
+      "Gestão de projetos",
+      "Primeiros socorros",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Eduardo Ferreira Queiroz",
+    "telefone": "(27) 95925-4150",
+    "cidade": "Águia Branca",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Larissa Costa Farias",
+    "telefone": "(28) 95977-3664",
+    "cidade": "Alegre",
+    "habilidades_tecnicas": [
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Fábio Mendes Martins",
+    "telefone": "(27) 94422-4598",
+    "cidade": "Alfredo Chaves",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Fotografia",
+      "PowerPoint",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Carlos Pereira Ribeiro",
+    "telefone": "(27) 99292-6155",
+    "cidade": "Alfredo Chaves",
+    "habilidades_tecnicas": [
+      "Manutenção de computadores",
+      "Organização de eventos",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "Juliana Diego Teixeira Rodrigues",
+    "telefone": "(27) 98830-5304",
+    "cidade": "Alfredo Chaves",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Logística",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Marcelo Ferreira Santos",
+    "telefone": "(27) 92504-3621",
+    "cidade": "Alto Rio Novo",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Comunicação",
+      "Organização de eventos",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Paulo Queiroz Silva",
+    "telefone": "(27) 91876-9797",
+    "cidade": "Alto Rio Novo",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace",
+      "Motorista categoria B",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "Patrícia Mello Silva",
+    "telefone": "(27) 94315-9201",
+    "cidade": "Alto Rio Novo",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Google Workspace",
+      "Redes sociais",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "Bianca Vinícius Assis Peixoto",
+    "telefone": "(27) 92646-9837",
+    "cidade": "Alto Rio Novo",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "PowerPoint",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "Rafael Bruna Rezende Dias",
+    "telefone": "(27) 99295-2290",
+    "cidade": "Alto Rio Novo",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Logística"
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "Rodrigo Peixoto Monteiro",
+    "telefone": "(28) 98835-4295",
+    "cidade": "Anchieta",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Análise de dados",
+      "Banco de dados",
+      "Canva",
+      "Fotografia"
+    ]
+  },
+  {
+    "id": 15,
+    "nome": "Rafael Maria Mendes Carvalho",
+    "telefone": "(28) 99638-4770",
+    "cidade": "Apiacá",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Logística",
+      "Noções de elétrica",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 16,
+    "nome": "João Lima Pereira",
+    "telefone": "(28) 94562-8953",
+    "cidade": "Apiacá",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Google Workspace",
+      "Logística"
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "Leandro Mendes Machado",
+    "telefone": "(28) 93119-2545",
+    "cidade": "Apiacá",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "Pedro Freitas Lima",
+    "telefone": "(27) 91790-5073",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Gestão de projetos",
+      "Google Workspace",
+      "Motorista categoria B",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "Fernanda Lucas Moreira Mello",
+    "telefone": "(27) 97260-2604",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Noções de elétrica",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 20,
+    "nome": "Patrícia Batista Pinto",
+    "telefone": "(27) 96570-1960",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 21,
+    "nome": "Tatiane Nunes Monteiro",
+    "telefone": "(27) 99105-8973",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Cadastro de dados",
+      "Excel"
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "Lívia Nascimento Santos",
+    "telefone": "(27) 90936-1821",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Google Workspace",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "Fernanda Bruna Pereira Peixoto",
+    "telefone": "(27) 96615-2964",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Excel",
+      "Organização de eventos",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "Gabriel Batista Campos",
+    "telefone": "(27) 95183-5272",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "Paulo Freitas Rodrigues",
+    "telefone": "(27) 94915-8491",
+    "cidade": "Aracruz",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Organização de eventos",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "Lucas Nascimento Ribeiro",
+    "telefone": "(28) 92170-6718",
+    "cidade": "Atílio Vivácqua",
+    "habilidades_tecnicas": [
+      "Gestão de projetos",
+      "Logística"
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "Patrícia Cunha Nascimento",
+    "telefone": "(28) 98666-1128",
+    "cidade": "Atílio Vivácqua",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Montagem de som"
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "Mateus Queiroz Gomes",
+    "telefone": "(28) 99909-4450",
+    "cidade": "Atílio Vivácqua",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Design gráfico",
+      "Google Workspace",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "Marcelo Cristiane Teixeira Santos",
+    "telefone": "(27) 94533-1722",
+    "cidade": "Baixo Guandu",
+    "habilidades_tecnicas": [
+      "Canva",
+      "PowerPoint",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "Paulo Martins Cunha",
+    "telefone": "(27) 97007-1158",
+    "cidade": "Baixo Guandu",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "Fábio Oliveira Rezende",
+    "telefone": "(27) 92426-8041",
+    "cidade": "Baixo Guandu",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "Daniel Ribeiro Mendes",
+    "telefone": "(27) 95794-7658",
+    "cidade": "Barra de São Francisco",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Excel"
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "Maria Rocha Lima",
+    "telefone": "(27) 96745-5065",
+    "cidade": "Barra de São Francisco",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Produção de conteúdo",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "Leandro Carvalho Barbosa",
+    "telefone": "(27) 97541-6728",
+    "cidade": "Boa Esperança",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Excel",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "Thiago Moreira Pereira",
+    "telefone": "(27) 94573-6753",
+    "cidade": "Boa Esperança",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Organização de eventos",
+      "Recepção",
+      "Word"
+    ]
+  },
+  {
+    "id": 36,
+    "nome": "Fernanda Beatriz Campos Teixeira",
+    "telefone": "(27) 97119-6663",
+    "cidade": "Boa Esperança",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Canva",
+      "Comunicação",
+      "Design gráfico",
+      "Excel"
+    ]
+  },
+  {
+    "id": 37,
+    "nome": "João Monteiro Silva",
+    "telefone": "(28) 98821-4228",
+    "cidade": "Bom Jesus do Norte",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Cadastro de dados",
+      "Canva",
+      "Comunicação",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 38,
+    "nome": "Tiago Almeida Dias",
+    "telefone": "(28) 96691-6344",
+    "cidade": "Bom Jesus do Norte",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Manutenção de computadores",
+      "PowerPoint",
+      "Primeiros socorros"
+    ]
+  },
+  {
+    "id": 39,
+    "nome": "Tiago Farias Rocha",
+    "telefone": "(28) 94930-7653",
+    "cidade": "Bom Jesus do Norte",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Comunicação",
+      "Produção de conteúdo",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 40,
+    "nome": "Cristiane Campos Peixoto",
+    "telefone": "(27) 97618-8238",
+    "cidade": "Brejetuba",
+    "habilidades_tecnicas": [
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 41,
+    "nome": "André Henrique Tavares Lima",
+    "telefone": "(27) 93848-6085",
+    "cidade": "Brejetuba",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Fotografia",
+      "Logística",
+      "Montagem de som",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 42,
+    "nome": "Bruna Machado Tavares",
+    "telefone": "(27) 91193-8461",
+    "cidade": "Brejetuba",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "PowerPoint",
+      "Word"
+    ]
+  },
+  {
+    "id": 43,
+    "nome": "Priscila Silva Costa",
+    "telefone": "(27) 93585-3881",
+    "cidade": "Brejetuba",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Cadastro de dados",
+      "Edição de vídeo",
+      "Organização de eventos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 44,
+    "nome": "Diego Peixoto Moraes",
+    "telefone": "(27) 97251-9270",
+    "cidade": "Brejetuba",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Design gráfico",
+      "Motorista categoria B",
+      "Python"
+    ]
+  },
+  {
+    "id": 45,
+    "nome": "Bianca Moreira Andrade",
+    "telefone": "(28) 93919-5499",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Análise de dados",
+      "Cadastro de dados",
+      "Noções de elétrica",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 46,
+    "nome": "Fábio Eduardo Ferreira Rodrigues",
+    "telefone": "(28) 92503-4505",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Manutenção de computadores",
+      "Montagem de som",
+      "Primeiros socorros",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 47,
+    "nome": "Fábio Vanessa Mello Batista",
+    "telefone": "(28) 96381-1320",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Comunicação"
+    ]
+  },
+  {
+    "id": 48,
+    "nome": "Fábio Nascimento Peixoto",
+    "telefone": "(28) 97999-4595",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Excel",
+      "Operação de projeção",
+      "Produção de conteúdo",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 49,
+    "nome": "Tiago Freitas Martins",
+    "telefone": "(28) 92091-9751",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Logística",
+      "Primeiros socorros",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 50,
+    "nome": "Tiago Souza Ferreira",
+    "telefone": "(28) 92223-8564",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 51,
+    "nome": "Camila Mello Moraes",
+    "telefone": "(28) 96211-5558",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Manutenção de computadores",
+      "Redes sociais",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 52,
+    "nome": "Larissa Pereira Oliveira",
+    "telefone": "(28) 94051-4266",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Facilitação de grupos",
+      "Google Workspace",
+      "HTML/CSS",
+      "Logística",
+      "Word"
+    ]
+  },
+  {
+    "id": 53,
+    "nome": "Leandro Almeida Borges",
+    "telefone": "(28) 97619-5198",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 54,
+    "nome": "Mateus Campos Souza",
+    "telefone": "(28) 99433-7149",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Design gráfico",
+      "Fotografia",
+      "Operação de projeção",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 55,
+    "nome": "Helena Dias Peixoto",
+    "telefone": "(28) 99272-1672",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Gestão de projetos",
+      "Google Workspace",
+      "Organização de eventos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 56,
+    "nome": "André Lima Silva",
+    "telefone": "(28) 98031-2729",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "Comunicação",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 57,
+    "nome": "Davi Andrade Moreira",
+    "telefone": "(28) 98817-8921",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "Logística",
+      "PowerPoint",
+      "Redes sociais",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 58,
+    "nome": "Carlos Cunha Mendes",
+    "telefone": "(28) 99336-7209",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Manutenção de computadores",
+      "Organização de eventos",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 59,
+    "nome": "Camila Vieira Teixeira",
+    "telefone": "(28) 99767-5526",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Logística",
+      "Manutenção de computadores",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 60,
+    "nome": "Davi Batista Pinto",
+    "telefone": "(28) 93937-8800",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 61,
+    "nome": "Helena Mendes Dias",
+    "telefone": "(28) 96046-8753",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Google Workspace",
+      "Logística",
+      "Montagem de som",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 62,
+    "nome": "Helena Mello Moreira",
+    "telefone": "(28) 93777-2976",
+    "cidade": "Cachoeiro de Itapemirim",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Facilitação de grupos",
+      "Primeiros socorros",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 63,
+    "nome": "Camila Machado Moreira",
+    "telefone": "(27) 98595-5636",
+    "cidade": "Cariacica",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "HTML/CSS",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 64,
+    "nome": "Vinícius Fábio Rocha Dias",
+    "telefone": "(27) 92073-5494",
+    "cidade": "Cariacica",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 65,
+    "nome": "Bianca Pinto Costa",
+    "telefone": "(28) 99405-5658",
+    "cidade": "Castelo",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 66,
+    "nome": "Rafael Pereira Freitas",
+    "telefone": "(27) 99453-1878",
+    "cidade": "Colatina",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Análise de dados",
+      "Atendimento ao público",
+      "Comunicação",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 67,
+    "nome": "Bruna Almeida Queiroz",
+    "telefone": "(27) 99933-4697",
+    "cidade": "Colatina",
+    "habilidades_tecnicas": [
+      "Operação de projeção",
+      "Organização de eventos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 68,
+    "nome": "Isabela Costa Ribeiro",
+    "telefone": "(27) 94335-2330",
+    "cidade": "Colatina",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "Operação de projeção",
+      "Redes sociais",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 69,
+    "nome": "Ana Batista Cunha",
+    "telefone": "(27) 97699-5771",
+    "cidade": "Colatina",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Banco de dados",
+      "Fotografia"
+    ]
+  },
+  {
+    "id": 70,
+    "nome": "Lucas Carvalho Teixeira",
+    "telefone": "(27) 99663-4241",
+    "cidade": "Conceição da Barra",
+    "habilidades_tecnicas": [
+      "Motorista categoria B",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 71,
+    "nome": "Carlos Felipe Gomes Pereira",
+    "telefone": "(28) 99749-5728",
+    "cidade": "Conceição do Castelo",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 72,
+    "nome": "Fábio João Pinto Cunha",
+    "telefone": "(28) 97078-6280",
+    "cidade": "Conceição do Castelo",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Operação de projeção",
+      "Power BI",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 73,
+    "nome": "Sandra Oliveira Rocha",
+    "telefone": "(28) 97245-5557",
+    "cidade": "Conceição do Castelo",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "Suporte de TI",
+      "Word"
+    ]
+  },
+  {
+    "id": 74,
+    "nome": "Gabriel Machado Vieira",
+    "telefone": "(28) 95260-2713",
+    "cidade": "Conceição do Castelo",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 75,
+    "nome": "Henrique Queiroz Oliveira",
+    "telefone": "(28) 95153-5135",
+    "cidade": "Divino de São Lourenço",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Montagem de som",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 76,
+    "nome": "Tatiane Vinícius Batista Santos",
+    "telefone": "(28) 98167-8242",
+    "cidade": "Divino de São Lourenço",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Excel",
+      "HTML/CSS",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 77,
+    "nome": "Roberta Bianca Pinto Almeida",
+    "telefone": "(27) 99975-4920",
+    "cidade": "Domingos Martins",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Montagem de som"
+    ]
+  },
+  {
+    "id": 78,
+    "nome": "Larissa Almeida Mello",
+    "telefone": "(28) 92522-9165",
+    "cidade": "Dores do Rio Preto",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Excel",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 79,
+    "nome": "Leandro Mendes Mello",
+    "telefone": "(28) 96284-4122",
+    "cidade": "Dores do Rio Preto",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Cadastro de dados",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 80,
+    "nome": "André Moreira Silva",
+    "telefone": "(27) 94891-9022",
+    "cidade": "Ecoporanga",
+    "habilidades_tecnicas": [
+      "Primeiros socorros",
+      "Produção de conteúdo",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 81,
+    "nome": "Thiago Queiroz Nascimento",
+    "telefone": "(27) 95272-4090",
+    "cidade": "Ecoporanga",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Facilitação de grupos",
+      "Logística"
+    ]
+  },
+  {
+    "id": 82,
+    "nome": "João Moraes Machado",
+    "telefone": "(27) 96246-7325",
+    "cidade": "Ecoporanga",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Organização de eventos",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 83,
+    "nome": "Lívia Lima Costa",
+    "telefone": "(27) 97213-2633",
+    "cidade": "Ecoporanga",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Excel",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 84,
+    "nome": "Paulo Lima Tavares",
+    "telefone": "(27) 91315-6383",
+    "cidade": "Ecoporanga",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Atendimento ao público",
+      "Edição de vídeo",
+      "Produção de conteúdo",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 85,
+    "nome": "Bianca Nunes Carvalho",
+    "telefone": "(27) 97110-2612",
+    "cidade": "Fundão",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "HTML/CSS",
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 86,
+    "nome": "Maria Oliveira Moraes",
+    "telefone": "(27) 94806-6873",
+    "cidade": "Fundão",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 87,
+    "nome": "Sandra Isabela Rocha Martins",
+    "telefone": "(27) 96267-4945",
+    "cidade": "Fundão",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Organização de eventos",
+      "Produção de conteúdo",
+      "Python"
+    ]
+  },
+  {
+    "id": 88,
+    "nome": "Paulo Silva Mello",
+    "telefone": "(27) 98955-3588",
+    "cidade": "Fundão",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Atendimento ao público",
+      "Logística",
+      "Motorista categoria B",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 89,
+    "nome": "Felipe Monteiro Teixeira",
+    "telefone": "(27) 94949-4263",
+    "cidade": "Fundão",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 90,
+    "nome": "Tiago Natália Freitas Moreira",
+    "telefone": "(27) 90803-9138",
+    "cidade": "Governador Lindenberg",
+    "habilidades_tecnicas": [
+      "Facilitação de grupos",
+      "Montagem de som",
+      "Organização de eventos",
+      "Secretariado",
+      "Word"
+    ]
+  },
+  {
+    "id": 91,
+    "nome": "Isabela Teixeira Rodrigues",
+    "telefone": "(27) 90645-6061",
+    "cidade": "Governador Lindenberg",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Facilitação de grupos",
+      "Logística",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 92,
+    "nome": "Gustavo Fábio Batista Rocha",
+    "telefone": "(27) 95994-9697",
+    "cidade": "Governador Lindenberg",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Montagem de som",
+      "Organização de eventos",
+      "Recepção",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 93,
+    "nome": "Rafael Larissa Mello Pereira",
+    "telefone": "(27) 96511-6992",
+    "cidade": "Governador Lindenberg",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Montagem de som",
+      "Primeiros socorros",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 94,
+    "nome": "Natália Teixeira Campos",
+    "telefone": "(28) 96086-2775",
+    "cidade": "Guaçuí",
+    "habilidades_tecnicas": [
+      "Design gráfico",
+      "HTML/CSS",
+      "Motorista categoria B",
+      "Redes sociais",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 95,
+    "nome": "Bianca Mello Dias",
+    "telefone": "(27) 91911-3290",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Banco de dados",
+      "Logística",
+      "Manutenção de computadores",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 96,
+    "nome": "Rafael Costa Mendes",
+    "telefone": "(27) 92222-7367",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 97,
+    "nome": "Marcelo Tavares Batista",
+    "telefone": "(27) 94583-1536",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Edição de vídeo",
+      "Gestão de projetos",
+      "PowerPoint",
+      "Produção de conteúdo"
+    ]
+  },
+  {
+    "id": 98,
+    "nome": "Mateus Rezende Nascimento",
+    "telefone": "(27) 95876-1992",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Logística",
+      "Noções de elétrica",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 99,
+    "nome": "Pedro Lima Mendes",
+    "telefone": "(27) 99250-4362",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Google Workspace",
+      "Motorista categoria B",
+      "Organização de eventos",
+      "Word"
+    ]
+  },
+  {
+    "id": 100,
+    "nome": "Larissa Lima Gomes",
+    "telefone": "(27) 99764-1046",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 101,
+    "nome": "Rafael Bruna Souza Rodrigues",
+    "telefone": "(27) 99647-6304",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Atendimento ao público",
+      "HTML/CSS",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 102,
+    "nome": "Mariana Lucas Batista Andrade",
+    "telefone": "(27) 97802-8344",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 103,
+    "nome": "Larissa Tavares Oliveira",
+    "telefone": "(27) 98543-5941",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "Power BI",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 104,
+    "nome": "Natália Costa Pinto",
+    "telefone": "(27) 97267-2204",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Logística",
+      "Recepção",
+      "Suporte de TI",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 105,
+    "nome": "Lucas Rodrigues Moreira",
+    "telefone": "(27) 99590-9984",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 106,
+    "nome": "André Helena Peixoto Monteiro",
+    "telefone": "(27) 91874-4522",
+    "cidade": "Guarapari",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Montagem de som",
+      "Motorista categoria B",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 107,
+    "nome": "Davi Costa Moraes",
+    "telefone": "(28) 94176-7132",
+    "cidade": "Ibatiba",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Motorista categoria B",
+      "Primeiros socorros",
+      "Produção de conteúdo",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 108,
+    "nome": "Gabriel Caio Ferreira Monteiro",
+    "telefone": "(28) 96105-3131",
+    "cidade": "Ibatiba",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 109,
+    "nome": "Vanessa Vieira Monteiro",
+    "telefone": "(28) 90842-5712",
+    "cidade": "Ibatiba",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 110,
+    "nome": "Juliana Machado Carvalho",
+    "telefone": "(28) 95736-7022",
+    "cidade": "Ibatiba",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Google Workspace",
+      "Power BI",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 111,
+    "nome": "Maria Carlos Peixoto Moreira",
+    "telefone": "(27) 95062-6567",
+    "cidade": "Ibiraçu",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Cadastro de dados",
+      "Canva",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 112,
+    "nome": "Lucas Rodrigo Gomes Souza",
+    "telefone": "(28) 93524-7163",
+    "cidade": "Ibitirama",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 113,
+    "nome": "Elaine Pedro Borges Peixoto",
+    "telefone": "(28) 92549-3579",
+    "cidade": "Ibitirama",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Comunicação",
+      "Manutenção de computadores",
+      "Operação de projeção",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 114,
+    "nome": "Tiago Monteiro Pinto",
+    "telefone": "(28) 96785-5475",
+    "cidade": "Ibitirama",
+    "habilidades_tecnicas": [
+      "Noções de elétrica",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 115,
+    "nome": "José Campos Pinto",
+    "telefone": "(28) 95053-1744",
+    "cidade": "Iconha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 116,
+    "nome": "Felipe Ribeiro Rodrigues",
+    "telefone": "(28) 94742-6375",
+    "cidade": "Iconha",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Excel",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 117,
+    "nome": "Fernanda Rodrigues Farias",
+    "telefone": "(28) 93770-9196",
+    "cidade": "Irupi",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 118,
+    "nome": "Tatiane Pereira Moraes",
+    "telefone": "(27) 99394-7626",
+    "cidade": "Itaguaçu",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "PowerPoint",
+      "Transmissão ao vivo",
+      "Word"
+    ]
+  },
+  {
+    "id": 119,
+    "nome": "Isabela Mateus Mello Rezende",
+    "telefone": "(27) 93986-8138",
+    "cidade": "Itaguaçu",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Fotografia",
+      "Google Workspace",
+      "Manutenção de computadores",
+      "Word"
+    ]
+  },
+  {
+    "id": 120,
+    "nome": "Thiago Martins Pereira",
+    "telefone": "(27) 91868-9693",
+    "cidade": "Itaguaçu",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace",
+      "Logística",
+      "Primeiros socorros",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 121,
+    "nome": "Bruna Costa Gomes",
+    "telefone": "(27) 92842-3504",
+    "cidade": "Itaguaçu",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Edição de vídeo",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 122,
+    "nome": "Tatiane Borges Campos",
+    "telefone": "(27) 99248-6295",
+    "cidade": "Itaguaçu",
+    "habilidades_tecnicas": [
+      "CRM",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 123,
+    "nome": "Bianca Dias Moreira",
+    "telefone": "(28) 95766-9312",
+    "cidade": "Itapemirim",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "Noções de elétrica"
+    ]
+  },
+  {
+    "id": 124,
+    "nome": "João Santos Rezende",
+    "telefone": "(28) 91257-2479",
+    "cidade": "Itapemirim",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 125,
+    "nome": "Gustavo Peixoto Machado",
+    "telefone": "(28) 91013-8381",
+    "cidade": "Itapemirim",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação",
+      "Noções de elétrica",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 126,
+    "nome": "Bruna Cunha Cunha",
+    "telefone": "(27) 99991-3600",
+    "cidade": "Itarana",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Google Workspace",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 127,
+    "nome": "Bianca Lima Pereira",
+    "telefone": "(28) 99141-7333",
+    "cidade": "Iúna",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace",
+      "Primeiros socorros",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 128,
+    "nome": "Gabriel Campos Gomes",
+    "telefone": "(28) 95082-7421",
+    "cidade": "Iúna",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "PowerPoint",
+      "Primeiros socorros",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 129,
+    "nome": "Diego Farias Lima",
+    "telefone": "(28) 98624-2531",
+    "cidade": "Iúna",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 130,
+    "nome": "Thiago Mariana Pinto Barbosa",
+    "telefone": "(27) 92538-2264",
+    "cidade": "Jaguaré",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Comunicação",
+      "Operação de projeção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 131,
+    "nome": "Tiago Eduardo Lima Tavares",
+    "telefone": "(27) 92527-3658",
+    "cidade": "Jaguaré",
+    "habilidades_tecnicas": [
+      "Canva",
+      "HTML/CSS",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 132,
+    "nome": "João Batista Rezende",
+    "telefone": "(27) 93891-8277",
+    "cidade": "Jaguaré",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Logística",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 133,
+    "nome": "Felipe Machado Barbosa",
+    "telefone": "(27) 99345-8218",
+    "cidade": "Jaguaré",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Logística",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 134,
+    "nome": "Aline Peixoto Rodrigues",
+    "telefone": "(28) 90854-8873",
+    "cidade": "Jerônimo Monteiro",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Fotografia",
+      "Produção de conteúdo",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 135,
+    "nome": "Gabriel Martins Moreira",
+    "telefone": "(28) 98410-3414",
+    "cidade": "Jerônimo Monteiro",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Google Workspace",
+      "Montagem de som",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 136,
+    "nome": "Pedro Freitas Assis",
+    "telefone": "(28) 96326-2337",
+    "cidade": "Jerônimo Monteiro",
+    "habilidades_tecnicas": [
+      "Facilitação de grupos",
+      "Noções de elétrica",
+      "Organização de eventos",
+      "Produção de conteúdo",
+      "Word"
+    ]
+  },
+  {
+    "id": 137,
+    "nome": "Juliana Rodrigues Oliveira",
+    "telefone": "(28) 97740-3273",
+    "cidade": "Jerônimo Monteiro",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Gestão de projetos",
+      "Manutenção de computadores",
+      "Primeiros socorros"
+    ]
+  },
+  {
+    "id": 138,
+    "nome": "Juliana Queiroz Peixoto",
+    "telefone": "(27) 91821-5720",
+    "cidade": "João Neiva",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Captação de recursos",
+      "Excel",
+      "Google Workspace",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 139,
+    "nome": "Vanessa Marcelo Tavares Mello",
+    "telefone": "(27) 99776-9782",
+    "cidade": "João Neiva",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Excel",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 140,
+    "nome": "José Monteiro Silva",
+    "telefone": "(27) 93941-7825",
+    "cidade": "João Neiva",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 141,
+    "nome": "Vinícius Pereira Andrade",
+    "telefone": "(27) 98316-1333",
+    "cidade": "João Neiva",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Google Workspace",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 142,
+    "nome": "Daniel Tiago Pereira Vieira",
+    "telefone": "(27) 91698-6447",
+    "cidade": "Laranja da Terra",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "PowerPoint",
+      "Secretariado",
+      "Treinamento",
+      "Word"
+    ]
+  },
+  {
+    "id": 143,
+    "nome": "Priscila Rocha Mello",
+    "telefone": "(27) 97840-3986",
+    "cidade": "Laranja da Terra",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "HTML/CSS",
+      "Primeiros socorros"
+    ]
+  },
+  {
+    "id": 144,
+    "nome": "José Barbosa Oliveira",
+    "telefone": "(27) 90686-6170",
+    "cidade": "Laranja da Terra",
+    "habilidades_tecnicas": [
+      "Motorista categoria B",
+      "PowerPoint",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 145,
+    "nome": "João Barbosa Nunes",
+    "telefone": "(27) 90783-6438",
+    "cidade": "Laranja da Terra",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Cadastro de dados",
+      "Canva",
+      "Logística"
+    ]
+  },
+  {
+    "id": 146,
+    "nome": "Caio Cunha Farias",
+    "telefone": "(27) 93060-9129",
+    "cidade": "Linhares",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 147,
+    "nome": "José Tiago Moraes Costa",
+    "telefone": "(27) 94843-6021",
+    "cidade": "Linhares",
+    "habilidades_tecnicas": [
+      "Canva",
+      "HTML/CSS",
+      "Organização de eventos",
+      "Redes sociais",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 148,
+    "nome": "Roberta Oliveira Vieira",
+    "telefone": "(27) 97126-5498",
+    "cidade": "Linhares",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "Facilitação de grupos",
+      "Noções de elétrica",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 149,
+    "nome": "Caio Beatriz Martins Souza",
+    "telefone": "(27) 97179-1570",
+    "cidade": "Mantenópolis",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação"
+    ]
+  },
+  {
+    "id": 150,
+    "nome": "Vinícius Juliana Farias Borges",
+    "telefone": "(28) 97371-7077",
+    "cidade": "Marataízes",
+    "habilidades_tecnicas": [
+      "PowerPoint",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 151,
+    "nome": "Vinícius Freitas Moraes",
+    "telefone": "(28) 94089-2858",
+    "cidade": "Marataízes",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Google Workspace",
+      "Python",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 152,
+    "nome": "Rafael Teixeira Teixeira",
+    "telefone": "(27) 93515-5678",
+    "cidade": "Marechal Floriano",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Cadastro de dados",
+      "Canva"
+    ]
+  },
+  {
+    "id": 153,
+    "nome": "Samuel Cunha Ferreira",
+    "telefone": "(27) 95236-6692",
+    "cidade": "Marilândia",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Noções de elétrica",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 154,
+    "nome": "Samuel Rocha Rezende",
+    "telefone": "(27) 91988-4292",
+    "cidade": "Marilândia",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 155,
+    "nome": "Diego Borges Rezende",
+    "telefone": "(27) 99038-3126",
+    "cidade": "Marilândia",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Treinamento",
+      "Word"
+    ]
+  },
+  {
+    "id": 156,
+    "nome": "Samuel Machado Andrade",
+    "telefone": "(27) 96708-2208",
+    "cidade": "Marilândia",
+    "habilidades_tecnicas": [
+      "Recepção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 157,
+    "nome": "Daniel Rodrigues Queiroz",
+    "telefone": "(28) 92981-3114",
+    "cidade": "Mimoso do Sul",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Logística",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 158,
+    "nome": "Patrícia Martins Moraes",
+    "telefone": "(28) 93694-6669",
+    "cidade": "Mimoso do Sul",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Edição de vídeo",
+      "Excel",
+      "Google Workspace",
+      "Operação de projeção"
+    ]
+  },
+  {
+    "id": 159,
+    "nome": "Mariana Dias Tavares",
+    "telefone": "(27) 98234-3762",
+    "cidade": "Montanha",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Comunicação",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 160,
+    "nome": "Gabriel Oliveira Borges",
+    "telefone": "(27) 93453-7825",
+    "cidade": "Montanha",
+    "habilidades_tecnicas": [
+      "PowerPoint",
+      "Primeiros socorros",
+      "Word"
+    ]
+  },
+  {
+    "id": 161,
+    "nome": "José Natália Dias Machado",
+    "telefone": "(27) 96653-5873",
+    "cidade": "Montanha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 162,
+    "nome": "Leandro Mello Ribeiro",
+    "telefone": "(27) 92353-6121",
+    "cidade": "Montanha",
+    "habilidades_tecnicas": [
+      "Fotografia",
+      "Google Workspace",
+      "Noções de elétrica",
+      "Produção de conteúdo",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 163,
+    "nome": "André Queiroz Costa",
+    "telefone": "(27) 97642-3007",
+    "cidade": "Montanha",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "Comunicação",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 164,
+    "nome": "Isabela Batista Mendes",
+    "telefone": "(27) 92616-6364",
+    "cidade": "Mucurici",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Gestão de projetos",
+      "Google Workspace",
+      "Montagem de som",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 165,
+    "nome": "Marcelo Renata Dias Pinto",
+    "telefone": "(27) 98281-8491",
+    "cidade": "Mucurici",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "CRM",
+      "Motorista categoria B",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 166,
+    "nome": "Pedro Nunes Pinto",
+    "telefone": "(27) 97710-5681",
+    "cidade": "Mucurici",
+    "habilidades_tecnicas": [
+      "Facilitação de grupos",
+      "Google Workspace",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 167,
+    "nome": "Paulo Rezende Freitas",
+    "telefone": "(28) 96563-1838",
+    "cidade": "Muniz Freire",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva"
+    ]
+  },
+  {
+    "id": 168,
+    "nome": "Eduardo Assis Cunha",
+    "telefone": "(28) 94582-2946",
+    "cidade": "Muniz Freire",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 169,
+    "nome": "Diego André Rezende Gomes",
+    "telefone": "(28) 96576-9193",
+    "cidade": "Muniz Freire",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Primeiros socorros",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 170,
+    "nome": "Samuel Lima Machado",
+    "telefone": "(28) 92440-9446",
+    "cidade": "Muniz Freire",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Excel"
+    ]
+  },
+  {
+    "id": 171,
+    "nome": "Renata Tavares Dias",
+    "telefone": "(28) 98311-9351",
+    "cidade": "Muniz Freire",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Fotografia",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 172,
+    "nome": "Thiago Almeida Batista",
+    "telefone": "(28) 90436-8775",
+    "cidade": "Muqui",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Recepção",
+      "Redes sociais",
+      "Treinamento",
+      "Word"
+    ]
+  },
+  {
+    "id": 173,
+    "nome": "Lívia Machado Martins",
+    "telefone": "(28) 96229-3421",
+    "cidade": "Muqui",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Organização de eventos",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 174,
+    "nome": "Maria Cunha Moraes",
+    "telefone": "(28) 96765-4340",
+    "cidade": "Muqui",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Design gráfico",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 175,
+    "nome": "Camila Queiroz Moraes",
+    "telefone": "(28) 97837-9609",
+    "cidade": "Muqui",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Excel",
+      "Logística",
+      "Python",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 176,
+    "nome": "Natália Teixeira Tavares",
+    "telefone": "(28) 94038-5571",
+    "cidade": "Muqui",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Facilitação de grupos",
+      "HTML/CSS",
+      "Logística",
+      "Primeiros socorros"
+    ]
+  },
+  {
+    "id": 177,
+    "nome": "Gustavo Machado Vieira",
+    "telefone": "(27) 94480-5715",
+    "cidade": "Nova Venécia",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Captação de recursos",
+      "Montagem de som",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 178,
+    "nome": "Elaine Samuel Gomes Nunes",
+    "telefone": "(27) 91294-6674",
+    "cidade": "Nova Venécia",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Comunicação"
+    ]
+  },
+  {
+    "id": 179,
+    "nome": "Carlos Isabela Queiroz Moreira",
+    "telefone": "(27) 99614-4920",
+    "cidade": "Nova Venécia",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "HTML/CSS",
+      "Logística",
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 180,
+    "nome": "Bianca Thiago Carvalho Santos",
+    "telefone": "(27) 97739-2647",
+    "cidade": "Nova Venécia",
+    "habilidades_tecnicas": [
+      "Logística",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 181,
+    "nome": "Priscila Machado Machado",
+    "telefone": "(27) 94706-6262",
+    "cidade": "Nova Venécia",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Fotografia",
+      "Produção de conteúdo"
+    ]
+  },
+  {
+    "id": 182,
+    "nome": "Fábio Oliveira Rocha",
+    "telefone": "(27) 92880-1595",
+    "cidade": "Pancas",
+    "habilidades_tecnicas": [
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 183,
+    "nome": "Sandra Peixoto Costa",
+    "telefone": "(27) 95489-5662",
+    "cidade": "Pancas",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Excel",
+      "Operação de projeção",
+      "PowerPoint",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 184,
+    "nome": "Carlos Barbosa Almeida",
+    "telefone": "(27) 97518-5215",
+    "cidade": "Pancas",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Logística",
+      "Motorista categoria B",
+      "Power BI",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 185,
+    "nome": "Natália Barbosa Rocha",
+    "telefone": "(27) 96643-8007",
+    "cidade": "Pedro Canário",
+    "habilidades_tecnicas": [
+      "Recepção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 186,
+    "nome": "Leandro Eduardo Moraes Mendes",
+    "telefone": "(27) 93858-8319",
+    "cidade": "Pedro Canário",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Gestão de projetos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 187,
+    "nome": "Priscila Rafael Rezende Mendes",
+    "telefone": "(27) 97625-6026",
+    "cidade": "Pinheiros",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Excel",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 188,
+    "nome": "Helena Almeida Nunes",
+    "telefone": "(27) 93618-4590",
+    "cidade": "Pinheiros",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Operação de projeção",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 189,
+    "nome": "Vanessa Queiroz Machado",
+    "telefone": "(27) 93578-5054",
+    "cidade": "Pinheiros",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Logística",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 190,
+    "nome": "Lucas Diego Borges Almeida",
+    "telefone": "(28) 98281-4312",
+    "cidade": "Piúma",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação"
+    ]
+  },
+  {
+    "id": 191,
+    "nome": "Rafael Ribeiro Campos",
+    "telefone": "(28) 98361-8298",
+    "cidade": "Piúma",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Noções de elétrica",
+      "Python"
+    ]
+  },
+  {
+    "id": 192,
+    "nome": "Vanessa Tatiane Mello Borges",
+    "telefone": "(28) 95049-1356",
+    "cidade": "Piúma",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva"
+    ]
+  },
+  {
+    "id": 193,
+    "nome": "Daniel Pereira Nascimento",
+    "telefone": "(28) 91130-8734",
+    "cidade": "Piúma",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Excel",
+      "Organização de eventos",
+      "PowerPoint",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 194,
+    "nome": "Elaine Rodrigues Batista",
+    "telefone": "(28) 96266-8348",
+    "cidade": "Piúma",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados"
+    ]
+  },
+  {
+    "id": 195,
+    "nome": "Fernanda Nascimento Freitas",
+    "telefone": "(27) 93648-1056",
+    "cidade": "Ponto Belo",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Design gráfico",
+      "Facilitação de grupos",
+      "HTML/CSS",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 196,
+    "nome": "Davi Nascimento Monteiro",
+    "telefone": "(27) 93762-5055",
+    "cidade": "Ponto Belo",
+    "habilidades_tecnicas": [
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 197,
+    "nome": "Tiago Batista Tavares",
+    "telefone": "(27) 90256-4943",
+    "cidade": "Ponto Belo",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Comunicação",
+      "Design gráfico",
+      "PowerPoint",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 198,
+    "nome": "Beatriz Santos Mendes",
+    "telefone": "(27) 96590-8191",
+    "cidade": "Ponto Belo",
+    "habilidades_tecnicas": [
+      "Google Workspace",
+      "Noções de elétrica",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 199,
+    "nome": "Larissa Borges Moraes",
+    "telefone": "(28) 95253-4881",
+    "cidade": "Presidente Kennedy",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Montagem de som",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 200,
+    "nome": "Felipe Moreira Santos",
+    "telefone": "(28) 99693-3869",
+    "cidade": "Presidente Kennedy",
+    "habilidades_tecnicas": [
+      "Logística",
+      "PowerPoint",
+      "Produção de conteúdo",
+      "Python"
+    ]
+  },
+  {
+    "id": 201,
+    "nome": "Vanessa Gomes Dias",
+    "telefone": "(27) 98813-8758",
+    "cidade": "Rio Bananal",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Manutenção de computadores",
+      "Produção de conteúdo",
+      "Python",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 202,
+    "nome": "Pedro Queiroz Batista",
+    "telefone": "(27) 99130-9683",
+    "cidade": "Rio Bananal",
+    "habilidades_tecnicas": [
+      "Edição de vídeo",
+      "Motorista categoria B",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 203,
+    "nome": "Thiago Ferreira Cunha",
+    "telefone": "(27) 91514-9775",
+    "cidade": "Rio Bananal",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 204,
+    "nome": "Lucas Barbosa Campos",
+    "telefone": "(27) 99156-4555",
+    "cidade": "Rio Bananal",
+    "habilidades_tecnicas": [
+      "PowerPoint",
+      "Redes sociais",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 205,
+    "nome": "Aline Almeida Machado",
+    "telefone": "(28) 99902-4350",
+    "cidade": "Rio Novo do Sul",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Excel",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 206,
+    "nome": "Fábio Vieira Dias",
+    "telefone": "(28) 98401-9147",
+    "cidade": "Rio Novo do Sul",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Manutenção de computadores",
+      "Montagem de som",
+      "Motorista categoria B",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 207,
+    "nome": "Gustavo Batista Oliveira",
+    "telefone": "(28) 93625-3390",
+    "cidade": "Rio Novo do Sul",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Captação de recursos",
+      "Manutenção de computadores",
+      "Suporte de TI",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 208,
+    "nome": "Lívia Thiago Batista Nunes",
+    "telefone": "(28) 93768-7223",
+    "cidade": "Rio Novo do Sul",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 209,
+    "nome": "Paulo Pinto Pinto",
+    "telefone": "(27) 95770-3773",
+    "cidade": "Santa Leopoldina",
+    "habilidades_tecnicas": [
+      "Canva",
+      "PowerPoint",
+      "Primeiros socorros"
+    ]
+  },
+  {
+    "id": 210,
+    "nome": "Fábio Lucas Santos Andrade",
+    "telefone": "(27) 90794-1104",
+    "cidade": "Santa Leopoldina",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Logística"
+    ]
+  },
+  {
+    "id": 211,
+    "nome": "Camila Assis Mello",
+    "telefone": "(27) 97916-8993",
+    "cidade": "Santa Leopoldina",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Edição de vídeo",
+      "Excel",
+      "Logística",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 212,
+    "nome": "Vanessa Silva Souza",
+    "telefone": "(27) 94501-9777",
+    "cidade": "Santa Leopoldina",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Canva"
+    ]
+  },
+  {
+    "id": 213,
+    "nome": "Mateus Isabela Andrade Gomes",
+    "telefone": "(27) 98625-5135",
+    "cidade": "Santa Leopoldina",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Gestão de projetos",
+      "Redes sociais",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 214,
+    "nome": "Sandra Mendes Carvalho",
+    "telefone": "(27) 91320-1519",
+    "cidade": "Santa Maria de Jetibá",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Google Workspace",
+      "Motorista categoria B",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 215,
+    "nome": "Diego Machado Santos",
+    "telefone": "(27) 92807-2354",
+    "cidade": "Santa Maria de Jetibá",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 216,
+    "nome": "Camila Borges Machado",
+    "telefone": "(27) 91218-5593",
+    "cidade": "Santa Maria de Jetibá",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Gestão de projetos",
+      "Logística",
+      "PowerPoint",
+      "Python"
+    ]
+  },
+  {
+    "id": 217,
+    "nome": "Camila Campos Gomes",
+    "telefone": "(27) 96525-2260",
+    "cidade": "Santa Teresa",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Word"
+    ]
+  },
+  {
+    "id": 218,
+    "nome": "Thiago Farias Rodrigues",
+    "telefone": "(27) 91284-9204",
+    "cidade": "Santa Teresa",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "HTML/CSS",
+      "Recepção",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 219,
+    "nome": "Thiago Peixoto Tavares",
+    "telefone": "(27) 96499-6347",
+    "cidade": "Santa Teresa",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Google Workspace",
+      "Logística",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 220,
+    "nome": "Larissa Vieira Queiroz",
+    "telefone": "(27) 97075-4043",
+    "cidade": "Santa Teresa",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 221,
+    "nome": "Carlos Gomes Farias",
+    "telefone": "(27) 92527-7383",
+    "cidade": "Santa Teresa",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "Montagem de som",
+      "Organização de eventos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 222,
+    "nome": "Vinícius Fernanda Moreira Costa",
+    "telefone": "(27) 97061-8353",
+    "cidade": "São Domingos do Norte",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Google Workspace",
+      "Noções de elétrica",
+      "Operação de projeção"
+    ]
+  },
+  {
+    "id": 223,
+    "nome": "Eduardo Silva Nunes",
+    "telefone": "(27) 91387-4977",
+    "cidade": "São Domingos do Norte",
+    "habilidades_tecnicas": [
+      "Banco de dados",
+      "Excel",
+      "Facilitação de grupos",
+      "Manutenção de computadores",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 224,
+    "nome": "Carlos Dias Moreira",
+    "telefone": "(27) 91036-3739",
+    "cidade": "São Domingos do Norte",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Cadastro de dados",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 225,
+    "nome": "Paulo Mendes Pinto",
+    "telefone": "(27) 93203-8501",
+    "cidade": "São Gabriel da Palha",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Logística",
+      "Redes sociais",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 226,
+    "nome": "Renata Lima Tavares",
+    "telefone": "(27) 95399-8212",
+    "cidade": "São Gabriel da Palha",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 227,
+    "nome": "Gustavo Peixoto Barbosa",
+    "telefone": "(27) 92910-7524",
+    "cidade": "São Gabriel da Palha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Operação de projeção",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 228,
+    "nome": "Gustavo Farias Moreira",
+    "telefone": "(27) 96437-6980",
+    "cidade": "São Gabriel da Palha",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Cadastro de dados",
+      "PowerPoint",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 229,
+    "nome": "Maria Mello Ribeiro",
+    "telefone": "(28) 94773-2133",
+    "cidade": "São José do Calçado",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 230,
+    "nome": "Samuel Beatriz Monteiro Farias",
+    "telefone": "(27) 97851-7566",
+    "cidade": "São Mateus",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Cadastro de dados",
+      "Edição de vídeo",
+      "Operação de projeção",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 231,
+    "nome": "Elaine Isabela Mendes Vieira",
+    "telefone": "(27) 90725-7547",
+    "cidade": "São Mateus",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação",
+      "Excel",
+      "Gestão de projetos",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 232,
+    "nome": "Larissa Assis Andrade",
+    "telefone": "(27) 99424-4621",
+    "cidade": "São Mateus",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Excel",
+      "Gestão de projetos",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 233,
+    "nome": "Maria Machado Costa",
+    "telefone": "(27) 91406-2901",
+    "cidade": "São Mateus",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Edição de vídeo",
+      "Facilitação de grupos",
+      "Logística",
+      "Power BI"
+    ]
+  },
+  {
+    "id": 234,
+    "nome": "Leandro Davi Vieira Machado",
+    "telefone": "(27) 97412-6225",
+    "cidade": "São Roque do Canaã",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Comunicação",
+      "Logística",
+      "Python"
+    ]
+  },
+  {
+    "id": 235,
+    "nome": "Maria Lima Costa",
+    "telefone": "(27) 92692-4996",
+    "cidade": "São Roque do Canaã",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 236,
+    "nome": "Larissa Tiago Freitas Rocha",
+    "telefone": "(27) 97080-7481",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Motorista categoria B"
+    ]
+  },
+  {
+    "id": 237,
+    "nome": "Eduardo Henrique Silva Ribeiro",
+    "telefone": "(27) 91025-2667",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 238,
+    "nome": "Rafael Teixeira Pinto",
+    "telefone": "(27) 95134-7367",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Motorista categoria B",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 239,
+    "nome": "Natália Dias Tavares",
+    "telefone": "(27) 92194-6131",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Google Workspace",
+      "Motorista categoria B",
+      "PowerPoint",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 240,
+    "nome": "Fernanda Rezende Gomes",
+    "telefone": "(27) 96852-3258",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Design gráfico",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 241,
+    "nome": "Patrícia Gustavo Pinto Nunes",
+    "telefone": "(27) 97389-1878",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Banco de dados",
+      "HTML/CSS",
+      "Logística",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 242,
+    "nome": "Diego Assis Pinto",
+    "telefone": "(27) 98056-7809",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação",
+      "Logística",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 243,
+    "nome": "João Moreira Carvalho",
+    "telefone": "(27) 92755-8492",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Google Workspace",
+      "Logística",
+      "Montagem de som",
+      "Word"
+    ]
+  },
+  {
+    "id": 244,
+    "nome": "Elaine Nascimento Rezende",
+    "telefone": "(27) 90681-8231",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Design gráfico",
+      "Google Workspace",
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 245,
+    "nome": "Felipe Oliveira Cunha",
+    "telefone": "(27) 91425-8193",
+    "cidade": "Serra",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 246,
+    "nome": "Patrícia Tavares Rodrigues",
+    "telefone": "(27) 93390-1972",
+    "cidade": "Sooretama",
+    "habilidades_tecnicas": [
+      "Facilitação de grupos",
+      "Suporte de TI",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 247,
+    "nome": "Gustavo Nunes Nunes",
+    "telefone": "(28) 98428-2560",
+    "cidade": "Vargem Alta",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Fotografia",
+      "Recepção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 248,
+    "nome": "Helena Gustavo Rodrigues Mendes",
+    "telefone": "(28) 94055-7434",
+    "cidade": "Vargem Alta",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Excel",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 249,
+    "nome": "Lucas Ferreira Freitas",
+    "telefone": "(28) 94558-7046",
+    "cidade": "Vargem Alta",
+    "habilidades_tecnicas": [
+      "Noções de elétrica",
+      "Produção de conteúdo",
+      "Recepção",
+      "Secretariado",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 250,
+    "nome": "Bianca Vieira Pereira",
+    "telefone": "(28) 96516-4568",
+    "cidade": "Vargem Alta",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Excel",
+      "Motorista categoria B",
+      "Organização de eventos",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 251,
+    "nome": "Diego Borges Rodrigues",
+    "telefone": "(28) 97951-6631",
+    "cidade": "Vargem Alta",
+    "habilidades_tecnicas": [
+      "Logística",
+      "Manutenção de computadores",
+      "Montagem de som",
+      "Primeiros socorros",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 252,
+    "nome": "Maria Almeida Martins",
+    "telefone": "(28) 90011-8009",
+    "cidade": "Venda Nova do Imigrante",
+    "habilidades_tecnicas": [
+      "Motorista categoria B",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 253,
+    "nome": "Gabriel Tiago Rezende Teixeira",
+    "telefone": "(27) 92711-1848",
+    "cidade": "Viana",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Redes sociais",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 254,
+    "nome": "Camila Larissa Machado Pereira",
+    "telefone": "(27) 98510-8291",
+    "cidade": "Viana",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Excel",
+      "Gestão de projetos",
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 255,
+    "nome": "Helena Eduardo Rodrigues Machado",
+    "telefone": "(27) 91463-2678",
+    "cidade": "Vila Pavão",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 256,
+    "nome": "Priscila Gomes Pereira",
+    "telefone": "(27) 90138-3688",
+    "cidade": "Vila Valério",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Canva",
+      "Redes sociais",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 257,
+    "nome": "Isabela Mateus Cunha Ribeiro",
+    "telefone": "(27) 92293-3017",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Organização de eventos",
+      "PowerPoint",
+      "Produção de conteúdo"
+    ]
+  },
+  {
+    "id": 258,
+    "nome": "Bruna Queiroz Peixoto",
+    "telefone": "(27) 99954-5668",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Comunicação",
+      "Organização de eventos",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 259,
+    "nome": "Beatriz Assis Barbosa",
+    "telefone": "(27) 94842-1894",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 260,
+    "nome": "Bianca Peixoto Pereira",
+    "telefone": "(27) 90197-6916",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "CRM",
+      "Cadastro de dados",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 261,
+    "nome": "Natália Rocha Machado",
+    "telefone": "(27) 91195-1273",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "HTML/CSS",
+      "Produção de conteúdo",
+      "Treinamento"
+    ]
+  },
+  {
+    "id": 262,
+    "nome": "João Santos Freitas",
+    "telefone": "(27) 98209-7806",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Captação de recursos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 263,
+    "nome": "Carlos Camila Ferreira Dias",
+    "telefone": "(27) 92545-9788",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Edição de vídeo",
+      "Google Workspace",
+      "HTML/CSS"
+    ]
+  },
+  {
+    "id": 264,
+    "nome": "Helena Gabriel Monteiro Mendes",
+    "telefone": "(27) 97118-2900",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Operação de projeção",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 265,
+    "nome": "Helena Silva Martins",
+    "telefone": "(27) 95680-9568",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Design gráfico",
+      "Excel",
+      "Recepção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 266,
+    "nome": "Elaine Souza Lima",
+    "telefone": "(27) 94456-9582",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Comunicação",
+      "Design gráfico",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 267,
+    "nome": "Bianca Pereira Pinto",
+    "telefone": "(27) 95900-1908",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Recepção",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 268,
+    "nome": "Sandra Almeida Carvalho",
+    "telefone": "(27) 90042-1721",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Análise de dados",
+      "Atendimento ao público",
+      "Comunicação",
+      "Gestão de projetos",
+      "Suporte de TI"
+    ]
+  },
+  {
+    "id": 269,
+    "nome": "Vinícius João Farias Gomes",
+    "telefone": "(27) 99058-7870",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Administração",
+      "Excel"
+    ]
+  },
+  {
+    "id": 270,
+    "nome": "Carlos Pereira Borges",
+    "telefone": "(27) 98225-1862",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Manutenção de computadores",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 271,
+    "nome": "Lucas Mello Nunes",
+    "telefone": "(27) 95090-6362",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Canva",
+      "PowerPoint",
+      "Recepção"
+    ]
+  },
+  {
+    "id": 272,
+    "nome": "Aline Nunes Borges",
+    "telefone": "(27) 93974-8600",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Excel"
+    ]
+  },
+  {
+    "id": 273,
+    "nome": "Juliana Fábio Silva Batista",
+    "telefone": "(27) 95675-1157",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Logística",
+      "Organização de eventos"
+    ]
+  },
+  {
+    "id": 274,
+    "nome": "Camila Andrade Mendes",
+    "telefone": "(27) 90981-3332",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Gestão de projetos",
+      "Operação de projeção",
+      "PowerPoint",
+      "Secretariado"
+    ]
+  },
+  {
+    "id": 275,
+    "nome": "Helena Rezende Mello",
+    "telefone": "(27) 91391-2565",
+    "cidade": "Vila Velha",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Logística",
+      "Produção de conteúdo",
+      "Python"
+    ]
+  },
+  {
+    "id": 276,
+    "nome": "José Teixeira Moraes",
+    "telefone": "(27) 96438-6345",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Canva",
+      "Google Workspace",
+      "Recepção",
+      "Transmissão ao vivo"
+    ]
+  },
+  {
+    "id": 277,
+    "nome": "Mariana Patrícia Campos Costa",
+    "telefone": "(27) 97365-8635",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Comunicação",
+      "Organização de eventos",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 278,
+    "nome": "Roberta Dias Mello",
+    "telefone": "(27) 91964-2481",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Canva",
+      "Captação de recursos",
+      "Facilitação de grupos",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 279,
+    "nome": "Camila Bruna Moraes Gomes",
+    "telefone": "(27) 95828-7492",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Excel",
+      "Recepção",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 280,
+    "nome": "Maria Freitas Cunha",
+    "telefone": "(27) 99013-5093",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Redes sociais"
+    ]
+  },
+  {
+    "id": 281,
+    "nome": "Rafael Silva Santos",
+    "telefone": "(27) 93641-3141",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Atendimento ao público",
+      "Google Workspace"
+    ]
+  },
+  {
+    "id": 282,
+    "nome": "Lívia Campos Teixeira",
+    "telefone": "(27) 91228-1357",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Comunicação",
+      "Organização de eventos",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 283,
+    "nome": "Mariana Tatiane Ferreira Lima",
+    "telefone": "(27) 90829-3752",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Noções de elétrica",
+      "PowerPoint"
+    ]
+  },
+  {
+    "id": 284,
+    "nome": "Fernanda Vieira Ribeiro",
+    "telefone": "(27) 94505-5585",
+    "cidade": "Vitória",
+    "habilidades_tecnicas": [
+      "Cadastro de dados",
+      "Excel",
+      "Logística",
+      "Secretariado",
+      "Transmissão ao vivo"
+    ]
+  }
+]
