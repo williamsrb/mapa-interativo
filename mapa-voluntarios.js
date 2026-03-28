@@ -406,10 +406,10 @@ const main = async () => {
       a.className = "filter-municipio-link";
       a.href = "#";
       a.dataset.municipioKey = key;
-      a.textContent = nome;
+      a.textContent = `${nome} (${count})`;
       a.setAttribute(
         "aria-label",
-        `${nome}, ${count} correspondência${count === 1 ? "" : "s"} — ver na lista`
+        `${nome}: ${count} correspondência${count === 1 ? "" : "s"} — ver na lista`
       );
       li.appendChild(a);
       filterMunicipioList.appendChild(li);
