@@ -4,6 +4,79 @@ const DATA_URL = "./voluntarios_es_teste.json";
 const FILTER_DEBOUNCE_MS = 300;
 /** Filtro só roda com pelo menos 3 caracteres (após trim). */
 const FILTER_MIN_LENGTH = 3;
+/**
+ * Consultas mais curtas que FILTER_MIN_LENGTH que ainda ativam o filtro.
+ * A correspondência nos dados é literal e case-sensitive (substring igual à entrada).
+ * Acrescente strings aqui conforme novos códigos curtos forem necessários.
+ * @type {readonly string[]}
+ */
+const FILTER_QUERY_EXCEPTIONS = [
+  "TI", // informática / habilidades
+];
+
+/** @param {string} qCollapsed resultado de collapseWhitespace no filtro */
+const isFilterExceptionQuery = (qCollapsed) =>
+  FILTER_QUERY_EXCEPTIONS.includes(qCollapsed);
+
+/**
+ * @param {string} [rawFilterCollapsed]
+ * @returns {string | null} texto da exceção casada (agulha case-sensitive) ou null
+ */
+const matchFilterException = (rawFilterCollapsed) => {
+  const q = collapseWhitespace(rawFilterCollapsed ?? "");
+  return FILTER_QUERY_EXCEPTIONS.find((ex) => ex === q) ?? null;
+};
+
+/**
+ * Remove espaços nas pontas e reduz sequências de espaços (ou quebras de linha / tabs)
+ * a um único espaço entre palavras.
+ * Converte NBSP (ex.: vindo de %A0 ou %C2%A0 na URL) em espaço comum.
+ * @param {string} s
+ */
+const collapseWhitespace = (s) =>
+  String(s ?? "")
+    .replace(/\u00a0/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+
+/**
+ * Texto já decodificado (após decodeURIComponent ou searchParams.get): NBSP → espaço, colapsa brancos.
+ * Não troca "+" aqui: "+" literal pode vir de %2B na URL.
+ * @param {string} s
+ */
+const normalizeSharedUrlText = (s) => collapseWhitespace(String(s ?? ""));
+
+/**
+ * Normaliza NBSP codificado na query/hash antes do parse da URL.
+ * - %C2%A0 é NBSP em UTF-8 (deve vir ANTES de tratar %A0).
+ * - Só %A0 isolado (Latin-1) vira %20; se fizermos %A0 antes, corrompemos %C2%A0
+ *   (o sufixo %A0 casa dentro de %C2%A0 e vira %C2%20, quebrando o decode).
+ * @param {string} encodedFragment
+ */
+const fixLegacyNbspPercentEncoding = (encodedFragment) =>
+  String(encodedFragment)
+    .replace(/%c2%a0/gi, "%20")
+    .replace(/%a0/gi, "%20");
+
+/**
+ * Decodifica o fragmento do hash: "+" como espaço; %A0→%20; depois decodeURIComponent.
+ * @param {string} raw hash sem "#"
+ */
+const decodeHashFragment = (raw) => {
+  const plusAsSpace = raw.replace(/\+/g, " ");
+  const utf8Safe = fixLegacyNbspPercentEncoding(plusAsSpace);
+  try {
+    return decodeURIComponent(utf8Safe);
+  } catch {
+    return utf8Safe;
+  }
+};
+
+/** @param {string} s texto do filtro (pode vir sujo da URL ou do campo). */
+const isFilterQueryActive = (s) => {
+  const q = collapseWhitespace(s);
+  return q.length >= FILTER_MIN_LENGTH || isFilterExceptionQuery(q);
+};
 /** Query param do município selecionado (valor com nome oficial, encoded). */
 const MUNICIPIO_QUERY_PARAM = "m";
 
@@ -21,10 +94,11 @@ const setStatus = (msg, isError = false) => {
 };
 
 /** @param {string} cidade */
-const normalizeKey = (cidade) => cidade.trim().normalize("NFC").toLowerCase();
+const normalizeKey = (cidade) =>
+  collapseWhitespace(cidade).normalize("NFC").toLowerCase();
 
 /** @param {unknown} value */
-const collectSearchableText = (value) => {
+const joinSearchableParts = (value) => {
   const parts = [];
   const walk = (v) => {
     if (v == null) return;
@@ -42,15 +116,23 @@ const collectSearchableText = (value) => {
     }
   };
   walk(value);
-  return parts.join(" ").toLowerCase();
+  return parts.join(" ");
 };
+
+/** @param {unknown} value */
+const collectSearchableText = (value) => joinSearchableParts(value).toLowerCase();
 
 /**
  * @param {unknown} row
  * @param {string} qLower trimmed, lowercased needle
+ * @param {string} [rawFilterCollapsed] filtro já colapsado; se for entrada de FILTER_QUERY_EXCEPTIONS, busca case-sensitive
  */
-const volunteerMatchesQuery = (row, qLower) => {
+const volunteerMatchesQuery = (row, qLower, rawFilterCollapsed) => {
   if (!row || typeof row !== "object") return false;
+  const exceptionNeedle = matchFilterException(rawFilterCollapsed);
+  if (exceptionNeedle !== null) {
+    return joinSearchableParts(row).includes(exceptionNeedle);
+  }
   return collectSearchableText(row).includes(qLower);
 };
 
@@ -58,20 +140,20 @@ const volunteerMatchesQuery = (row, qLower) => {
 const readFilterFromHash = () => {
   const raw = window.location.hash.replace(/^#/, "");
   if (!raw) return "";
-  try {
-    return decodeURIComponent(raw.replace(/\+/g, " "));
-  } catch {
-    return raw;
-  }
+  return normalizeSharedUrlText(decodeHashFragment(raw));
 };
 
 /** @returns {string} */
 const readMunicipioFromSearch = () => {
   try {
-    const u = new URL(window.location.href);
+    const fixedSearch = fixLegacyNbspPercentEncoding(window.location.search);
+    const u = new URL(
+      `${window.location.pathname}${fixedSearch}`,
+      window.location.origin
+    );
     const m = u.searchParams.get(MUNICIPIO_QUERY_PARAM);
     if (!m) return "";
-    return decodeURIComponent(m.replace(/\+/g, " "));
+    return normalizeSharedUrlText(m);
   } catch {
     return "";
   }
@@ -109,16 +191,30 @@ const buildVolunteersByCity = (data) => {
  * @param {string} nomeMunicipio
  * @param {Map<string, Array<{ nome?: string; telefone?: string; habilidades_tecnicas?: string[] }>>} byCity
  * @param {string | null} filterQLower quando definido (filtro ativo), só lista voluntários que casam com a busca
+ * @param {string | null} [filterRawTrimmed] texto original trimado (para exceção "TI" maiúsculo)
  */
-const renderVolunteerPanel = (nomeMunicipio, byCity, filterQLower = null) => {
+const renderVolunteerPanel = (
+  nomeMunicipio,
+  byCity,
+  filterQLower = null,
+  filterRawTrimmed = null
+) => {
   panelTitleEl.textContent = nomeMunicipio;
   const key = normalizeKey(nomeMunicipio);
   let list = byCity.get(key) ?? [];
   const q =
     typeof filterQLower === "string" ? filterQLower.trim().toLowerCase() : "";
-  const filtering = q.length >= FILTER_MIN_LENGTH;
+  const rawForRule =
+    typeof filterRawTrimmed === "string" &&
+    collapseWhitespace(filterRawTrimmed) !== ""
+      ? collapseWhitespace(filterRawTrimmed)
+      : q;
+  const filtering =
+    filterQLower != null &&
+    filterQLower !== "" &&
+    isFilterQueryActive(rawForRule);
   if (filtering) {
-    list = list.filter((row) => volunteerMatchesQuery(row, q));
+    list = list.filter((row) => volunteerMatchesQuery(row, q, rawForRule));
   }
   panelContentEl.replaceChildren();
 
@@ -251,8 +347,10 @@ const main = async () => {
   let filterActive = false;
   /** @type {Map<string, number>} */
   let filterMatchByKey = new Map();
-  /** Texto do filtro em minúsculas (≥ FILTER_MIN_LENGTH) enquanto o filtro estiver ativo. */
+  /** Texto do filtro em minúsculas enquanto o filtro estiver ativo. */
   let currentFilterQueryLower = "";
+  /** Texto original trimado (ex.: exceção "TI" em maiúsculas). */
+  let currentFilterRawTrimmed = "";
 
   const resetPanelToPlaceholder = () => {
     panelTitleEl.textContent = "Selecione um município";
@@ -284,7 +382,8 @@ const main = async () => {
     const fi = document.getElementById("volunteer-filter");
     if (fc instanceof HTMLElement) {
       fc.hidden =
-        !(fi instanceof HTMLInputElement) || fi.value.trim().length === 0;
+        !(fi instanceof HTMLInputElement) ||
+        collapseWhitespace(fi.value) === "";
     }
     if (pc instanceof HTMLElement) {
       pc.hidden = !imported.querySelector("g[nome].municipio-active");
@@ -297,6 +396,7 @@ const main = async () => {
     filterActive = false;
     filterMatchByKey = new Map();
     currentFilterQueryLower = "";
+    currentFilterRawTrimmed = "";
     hideFilterMunicipioNav();
     clearFilterHighlights();
     if (activeGroup) {
@@ -312,6 +412,52 @@ const main = async () => {
       const u = new URL(window.location.href);
       u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
       u.hash = "";
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    }
+    updateClearButtonsVisibility();
+  };
+
+  /**
+   * Limpa só o filtro (campo já pode estar vazio). Mantém município selecionado no mapa,
+   * lista completa no painel e parâmetro `m` na URL.
+   * @param {{ syncUrl?: boolean }} [opts]
+   */
+  const clearFilterStateOnly = (opts = {}) => {
+    const { syncUrl = true } = opts;
+    filterActive = false;
+    filterMatchByKey = new Map();
+    currentFilterQueryLower = "";
+    currentFilterRawTrimmed = "";
+    hideFilterMunicipioNav();
+    clearFilterHighlights();
+    if (activeGroup) {
+      restoreFill(activeGroup);
+      activeGroup = null;
+    }
+    tooltip.classList.remove("visible");
+    tooltip.setAttribute("aria-hidden", "true");
+
+    const activeEl = imported.querySelector("g[nome].municipio-active");
+    const selectedNome =
+      activeEl instanceof SVGGElement
+        ? activeEl.getAttribute("nome")
+        : null;
+
+    if (selectedNome) {
+      renderVolunteerPanel(selectedNome, volunteersByCity, null);
+    } else {
+      clearMunicipioActiveClass(imported);
+      resetPanelToPlaceholder();
+    }
+
+    setStatus(initialStatusText);
+
+    if (syncUrl) {
+      const u = new URL(window.location.href);
+      u.hash = "";
+      if (!selectedNome) {
+        u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      }
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
     updateClearButtonsVisibility();
@@ -333,7 +479,12 @@ const main = async () => {
       u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
-    updateClearButtonsVisibility();
+    const fi = document.getElementById("volunteer-filter");
+    if (fi instanceof HTMLInputElement && isFilterQueryActive(fi.value)) {
+      runFilterQuery(fi.value, { syncUrl });
+    } else {
+      updateClearButtonsVisibility();
+    }
   };
 
   /** @param {SVGGElement} g */
@@ -398,14 +549,20 @@ const main = async () => {
     if (!(g instanceof SVGGElement)) return;
     clearMunicipioActiveClass(imported);
     g.classList.add("municipio-active");
-    renderVolunteerPanel(
-      nome,
-      volunteersByCity,
-      filterActive ? currentFilterQueryLower : null
-    );
+
+    const fi = document.getElementById("volunteer-filter");
+    const longFilter =
+      fi instanceof HTMLInputElement && isFilterQueryActive(fi.value);
+
+    if (longFilter) {
+      runFilterQuery(fi.value, { syncUrl });
+      return;
+    }
+
+    renderVolunteerPanel(nome, volunteersByCity, null);
     if (syncUrl) {
       const u = new URL(window.location.href);
-      u.searchParams.set(MUNICIPIO_QUERY_PARAM, nome);
+      u.searchParams.set(MUNICIPIO_QUERY_PARAM, collapseWhitespace(nome));
       history.pushState(null, "", u.pathname + u.search + u.hash);
     }
     updateClearButtonsVisibility();
@@ -455,13 +612,19 @@ const main = async () => {
   /** @param {string} rawQuery @param {{ syncUrl?: boolean }} [opts] */
   const runFilterQuery = (rawQuery, opts = {}) => {
     const { syncUrl = true } = opts;
-    const q = rawQuery.trim();
+    const q = collapseWhitespace(rawQuery);
     const qLower = q.toLowerCase();
 
-    if (qLower.length < FILTER_MIN_LENGTH) {
+    if (!isFilterQueryActive(q)) {
       fullResetFromFilter({ syncUrl });
       return;
     }
+
+    const activeMuni = imported.querySelector("g[nome].municipio-active");
+    const scopedMunicipioNome =
+      activeMuni instanceof SVGGElement
+        ? activeMuni.getAttribute("nome")
+        : null;
 
     if (activeGroup) {
       restoreFill(activeGroup);
@@ -469,20 +632,25 @@ const main = async () => {
     }
     tooltip.classList.remove("visible");
     tooltip.setAttribute("aria-hidden", "true");
-    clearMunicipioActiveClass(imported);
-    resetPanelToPlaceholder();
+
     hideFilterMunicipioNav();
 
     clearFilterHighlights();
     filterMatchByKey = new Map();
     filterActive = true;
     currentFilterQueryLower = qLower;
+    currentFilterRawTrimmed = q;
+
+    const scopedKey = scopedMunicipioNome
+      ? normalizeKey(scopedMunicipioNome)
+      : null;
 
     const volunteers = Array.isArray(jsonData) ? jsonData : [];
     for (const row of volunteers) {
       if (typeof row !== "object" || row === null) continue;
       if (typeof row.cidade !== "string") continue;
-      if (!volunteerMatchesQuery(row, qLower)) continue;
+      if (scopedKey && normalizeKey(row.cidade) !== scopedKey) continue;
+      if (!volunteerMatchesQuery(row, qLower, q)) continue;
       const k = normalizeKey(row.cidade);
       filterMatchByKey.set(k, (filterMatchByKey.get(k) ?? 0) + 1);
     }
@@ -496,17 +664,59 @@ const main = async () => {
       (a, b) => a + b,
       0
     );
-    setStatus(
-      `Filtro ativo: ${filterMatchByKey.size} município(s) · ${totalMatches} correspondência(s)`
-    );
+    if (scopedMunicipioNome) {
+      setStatus(
+        `Filtro em ${scopedMunicipioNome}: ${totalMatches} correspondência${totalMatches === 1 ? "" : "s"}`
+      );
+    } else {
+      setStatus(
+        `Filtro ativo: ${filterMatchByKey.size} município(s) · ${totalMatches} correspondência(s)`
+      );
+    }
     renderFilterMunicipioNav();
+
+    if (scopedMunicipioNome) {
+      const gSel = nameToGroup.get(normalizeKey(scopedMunicipioNome));
+      if (gSel instanceof SVGGElement) {
+        clearMunicipioActiveClass(imported);
+        gSel.classList.add("municipio-active");
+        renderVolunteerPanel(
+          scopedMunicipioNome,
+          volunteersByCity,
+          currentFilterQueryLower,
+          currentFilterRawTrimmed
+        );
+      } else {
+        clearMunicipioActiveClass(imported);
+        resetPanelToPlaceholder();
+      }
+    } else {
+      clearMunicipioActiveClass(imported);
+      resetPanelToPlaceholder();
+    }
 
     if (syncUrl) {
       const u = new URL(window.location.href);
-      u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      if (scopedMunicipioNome) {
+        u.searchParams.set(
+          MUNICIPIO_QUERY_PARAM,
+          collapseWhitespace(scopedMunicipioNome)
+        );
+      } else {
+        u.searchParams.delete(MUNICIPIO_QUERY_PARAM);
+      }
       u.hash = `#${encodeURIComponent(q)}`;
       history.replaceState(null, "", u.pathname + u.search + u.hash);
     }
+
+    const fiAfterFilter = document.getElementById("volunteer-filter");
+    if (
+      fiAfterFilter instanceof HTMLInputElement &&
+      collapseWhitespace(fiAfterFilter.value) !== q
+    ) {
+      fiAfterFilter.value = q;
+    }
+
     updateClearButtonsVisibility();
   };
 
@@ -571,7 +781,7 @@ const main = async () => {
   const applyUrlToUi = () => {
     filterInput.value = readFilterFromHash();
     const m = readMunicipioFromSearch();
-    if (filterInput.value.trim().toLowerCase().length >= FILTER_MIN_LENGTH) {
+    if (isFilterQueryActive(filterInput.value)) {
       runFilterQuery(filterInput.value, { syncUrl: false });
     } else {
       fullResetFromFilter({ syncUrl: false });
@@ -600,7 +810,7 @@ const main = async () => {
       window.clearTimeout(debounceTimer);
       debounceTimer = 0;
       filterInput.value = "";
-      fullResetFromFilter({ syncUrl: true });
+      clearFilterStateOnly({ syncUrl: true });
     });
   }
 
@@ -629,7 +839,7 @@ const main = async () => {
     applyUrlToUi();
   });
 
-  if (filterInput.value.trim().toLowerCase().length >= FILTER_MIN_LENGTH) {
+  if (isFilterQueryActive(filterInput.value)) {
     runFilterQuery(filterInput.value, { syncUrl: false });
     const m0 = readMunicipioFromSearch();
     if (m0) {
